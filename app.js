@@ -33,6 +33,8 @@ app.use('/todos', isLogin, todosRouter)
 app.use('/categories', isLogin, categoryRouter)
 app.use('/groups', isLogin, groupRouter)
 
+app.use(express.static(__dirname + '/public', {dotfiles: 'allow'}))
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404))
