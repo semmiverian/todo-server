@@ -9,6 +9,7 @@ var debug = require('debug')('todo-server:server')
 var http = require('http')
 const https = require('https')
 const connect = require('../helpers/connect')
+const fs = require('fs')
 
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/todo-server.semmiverian.me/privkey.pem', 'utf8')
 const certificate = fs.readFileSync('/etc/letsencrypt/live/todo-server.semmiverian.me/cert.pem', 'utf8')
